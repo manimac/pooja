@@ -1,3 +1,33 @@
-<div>
-    Hai this is home page
-</div
+<style>
+    .active{
+        background: red;
+        color: greenyellow;
+    }
+</style>
+
+<div ng-controller="homeController">
+    Hai this is home page {{name}}
+    <div ng-bind="name"></div>
+    <div ng-class="{'active':showClass}">djfbjsdbfjksfnsdfnkj</div>
+    <div ng-style="styleProp">djfnmndmnfdngjnfm,dng</div>
+    <div ng-if="showDiv">
+        Test content for if
+    </div>
+    <div ng-show="showDiv">
+        Test content for show
+    </div>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="stu in students|filter:{age:20}|limitTo:2">
+                <td>{{stu.name}}</td>
+                <td>{{stu.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div ng-controller="testController">
+</div>
