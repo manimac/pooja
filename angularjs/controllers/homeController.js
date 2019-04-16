@@ -9,6 +9,9 @@ app.controller('homeController',function($scope){
     }
     $scope.showDiv = false;
 
+
+    $scope.price =70;
+
     $scope.students = [
         {
             name : 'Dinesh',

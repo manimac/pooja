@@ -4,9 +4,10 @@
         color: greenyellow;
     }
 </style>
-
+<div ng-include="'views/header.html'"></div>
 <div ng-controller="homeController">
     Hai this is home page {{name}}
+    {{price|agePlus}}
     <div ng-bind="name"></div>
     <div ng-class="{'active':showClass}">djfbjsdbfjksfnsdfnkj</div>
     <div ng-style="styleProp">djfnmndmnfdngjnfm,dng</div>
@@ -22,9 +23,9 @@
             <th>Age</th>
         </thead>
         <tbody>
-            <tr ng-repeat="stu in students|filter:{age:20}|limitTo:2">
-                <td>{{stu.name}}</td>
-                <td>{{stu.age}}</td>
+            <tr ng-repeat="stu in students|filter:{age:''}|limitTo:5">
+                <td>{{stu.name|toUppercase}}</td>
+                <td>{{stu.age|agePlus}}</td>
             </tr>
         </tbody>
     </table>
