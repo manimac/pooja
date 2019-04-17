@@ -6,6 +6,10 @@ Landing 1 Controller
     {{name}}
 </div>
 {{serviceContent}}
+<button ng-click="passValue()">Click me</button>
+<div>
+    {{yname}}
+</div>
 </div>
 <div ng-controller="landing2">
 Landing 2 Controller
@@ -13,4 +17,25 @@ Landing 2 Controller
     {{name}}
 </div>
 {{lan}}
+<div>
+    {{yname}}
 </div>
+<button ng-click="passValue2()">Click me from landing 2</button>
+
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="stu in students" ng-if="students">
+            <td>{{stu.Name}}</td>
+            <td>{{stu.age}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
