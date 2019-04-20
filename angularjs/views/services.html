@@ -1,2 +1,16 @@
 <div ng-include="'views/header.html'"></div>
-This is from services
+<div ng-controller="commonController">
+This is from {{currentPage}}
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in datas">
+            <td>{{data.Name}}</td>
+            <td>{{data.age}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

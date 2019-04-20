@@ -16,13 +16,14 @@
     <div ng-show="showDiv">
         Test content for show
     </div>
+    <input type="text" ng-model="limit">
     <table>
         <thead>
             <th>Name</th>
             <th>Age</th>
         </thead>
         <tbody>
-            <tr ng-repeat="stu in students|filter:{age:''}|limitTo:5">
+            <tr ng-repeat="stu in students|filter:{age:''}|limitTo:limit">
                 <td>{{stu.name|toUppercase}}</td>
                 <td>{{stu.age|agePlus}}</td>
             </tr>

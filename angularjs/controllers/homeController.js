@@ -48,5 +48,29 @@ app.controller('headerController',function($scope,$state){
     },{
         name : 'Services',
         state : 'services'
+    },{
+        name : 'Careers',
+        state : 'careers'
     }]
 });
+
+
+app.controller('commonController',function($scope,$state,customFactory){
+    $scope.currentPage = $state.current.name;
+    if($scope.currentPage == 'services'){
+        $scope.url = "http://localhost/pooja/angularjs/services.txt";
+    }
+    else{
+        $scope.url = "http://localhost/pooja/angularjs/careers.txt";
+    }
+
+    // $scope.url = "http://localhost/pooja/angularjs/"+ $scope.currentPage +".txt";
+
+    customFactory.httpMethod($scope.url)
+    .then(function(res){
+        $scope.datas = res.data;
+    })
+    .catch(function(err){
+        console.log(err)
+    })
+})

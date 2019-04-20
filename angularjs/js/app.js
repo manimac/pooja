@@ -21,6 +21,12 @@ app.config(function($stateProvider, $urlRouterProvider){
             templateUrl : 'views/services.html'
         }
     )
+    .state('careers',
+        {
+            url : '/careers',
+            templateUrl : 'views/services.html'
+        }
+    )
     .state('error',
         {
             url : '/error',
