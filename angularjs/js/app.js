@@ -2,9 +2,9 @@ var app = angular.module('erp',['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/error");
     $stateProvider
-    .state('home2',
+    .state('home',
         {
-            url : '/home3',
+            url : '/home',
             templateUrl : 'views/home.html'
             // controller : 'homeController'
         }
@@ -13,6 +13,12 @@ app.config(function($stateProvider, $urlRouterProvider){
         {
             url : '/about',
             templateUrl : 'views/about.html'
+        }
+    )
+    .state('services',
+        {
+            url : '/services',
+            templateUrl : 'views/services.html'
         }
     )
     .state('error',

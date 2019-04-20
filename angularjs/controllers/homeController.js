@@ -36,6 +36,17 @@ app.controller('homeController',function($scope){
     ]
 });
 
-app.controller('testController',function(){
-    
+app.controller('headerController',function($scope,$state){
+    $scope.currentState = $state.current.name;
+
+    $scope.menus = [{
+        name : 'Home',
+        state : 'home'
+    },{
+        name : 'About',
+        state : 'about'
+    },{
+        name : 'Services',
+        state : 'services'
+    }]
 });

@@ -21,7 +21,7 @@ app.controller('landing2',function(customService,$scope,$rootScope, customFactor
     $scope.passValue2 = function(){
         $rootScope.$broadcast('test2',{name : $scope.passName});
     }
-    customFactory.httpMethod("http://localhost/pooja/angularjs/test.txtss")
+    customFactory.httpMethod("http://localhost/pooja/angularjs/test.txt")
     .then(function(res){
         $scope.students = res.data;
     })
